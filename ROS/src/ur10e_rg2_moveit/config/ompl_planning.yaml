@@ -1,0 +1,27 @@
+planner_configs:
+  KPIECEkConfigDefault:
+    type: geometric::KPIECE
+    projection_evaluator: joints(shoulder_pan_joint,shoulder_lift_joint,elbow_joint)
+    goal_bias: 0.1
+    range: 0.1
+
+  BKPIECEkConfigDefault:
+    type: geometric::BKPIECE
+    projection_evaluator: joints(shoulder_pan_joint, shoulder_lift_joint)
+    goal_bias: 0.05
+    border_fraction: 0.4
+    #failed_expansion_score_factor: 0.5
+    #min_valid_path_fraction: 0.5
+    range: 0.2
+    smoothing: true
+arm:
+  default_planner_config: BKPIECEkConfigDefault
+  planner_configs:
+    - KPIECEkConfigDefault
+    - BKPIECEkConfigDefault
+  #simplify_solutions: true
+  #use_symmetry: true
+  use_simplification: true
+  use_optimization: true
+  longest_valid_segment_fraction: 0.005
+

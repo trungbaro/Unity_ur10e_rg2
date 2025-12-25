@@ -1,0 +1,2 @@
+moveit_msgs:ros_tcp_endpoint:ur10e_rg2_moveit:ur10e_rg2_urdf
+-DCATKIN_DEVEL_PREFIX=/home/bao/ur10e_gr2_ver3/ur10e_rg2_PickAndPlace/ROS/devel -DCMAKE_INSTALL_PREFIX=/home/bao/ur10e_gr2_ver3/ur10e_rg2_PickAndPlace/ROS/install -G Unix Makefiles
